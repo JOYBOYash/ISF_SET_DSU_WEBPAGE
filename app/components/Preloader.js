@@ -1,9 +1,10 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation"; // Use navigation hooks
 
-export default function Preloader({ children }) {
+// Preloader component
+function Preloader({ children }) {
   const [loading, setLoading] = useState(false);
   const pathname = usePathname(); // Get current route
   const searchParams = useSearchParams(); // Get query parameters
@@ -20,13 +21,22 @@ export default function Preloader({ children }) {
   }, [pathname, searchParams]); // Run effect on route change
 
   return (
-    <Suspense fallback={<div className="page-loader"><div className="spinner"></div></div>}>
+    <>
       {loading && (
         <div className="page-loader">
           <div className="spinner"></div>
         </div>
       )}
       {children}
+    </>
+  );
+}
+
+// Page component where Suspense is applied
+export default function PageWrapper({ children }) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Preloader>{children}</Preloader>
     </Suspense>
   );
 }
