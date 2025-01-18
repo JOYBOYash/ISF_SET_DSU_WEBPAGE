@@ -1,0 +1,10 @@
+@media only screen and (max-width: 480px) {
+
+    .mainevent{
+      display: flex;
+      flex-direction: column;
+     height: 1000px;
+
+    }
+  }
+  
