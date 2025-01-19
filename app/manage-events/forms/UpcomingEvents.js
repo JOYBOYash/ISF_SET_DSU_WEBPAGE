@@ -11,10 +11,15 @@ function UpcomingEvents() {
   const [eventDate, setEventDate] = useState("");
   const [Rewards, setRewards] = useState("");
 
+   const [message, setMessage] = useState({ type: "", text: "" });
+
   const AddUpcomingEvents = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "UpcomingEvents"), {
+      setMessage({ type: "success", text: "Event added successfully!" });
+      await addDoc(collection(db, "UpcomingEvents"),
+       {
+        
         eventName,
         eventDescription,
         eventPoster,
@@ -27,10 +32,10 @@ function UpcomingEvents() {
       setEventPoster("");
       setEventDate("");
       setRewards("");
-      alert("Event added successfully!");
     } catch (error) {
-      console.error("Error adding document: ", error);
-    }
+      console.error("Error adding event to Firestore: ", error);
+      setMessage({ type: "error", text: "Failed to add event. Please try again." });
+    } 
   };
 
   return (
@@ -42,6 +47,17 @@ function UpcomingEvents() {
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6 font-bold">
           - Add an Upcoming Event -
         </h1>
+        
+        {message.text && (
+          <p
+            className={`text-center mb-4 ${
+              message.type === "success" ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {message.text}
+          </p>
+        )}
+
         <div className="mb-6">
           <label className="block text-gray-300 mb-2">Event Name:</label>
           <input

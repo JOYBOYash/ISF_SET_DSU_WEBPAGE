@@ -12,6 +12,8 @@ function FinishedEvents() {
   const [winnersNames, setWinnersNames] = useState("");
   const [eventPics, setEventPics] = useState("");
 
+  const [message, setMessage] = useState({ type: "", text: "" });
+
   const AddFinishedEvents = async (e) => {
     e.preventDefault();
     try {
@@ -29,10 +31,11 @@ function FinishedEvents() {
       setRewards("");
       setWinnersNames("");
       setEventPics("");
-      alert("Event added successfully!");
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
+      setMessage({ type: "success", text: "Event added successfully!" });
+    }  catch (error) {
+      console.error("Error adding event to Firestore: ", error);
+      setMessage({ type: "error", text: "Failed to add event. Please try again." });
+    } 
   };
 
   return (
@@ -44,6 +47,17 @@ function FinishedEvents() {
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6 font-bold">
           - Add a Finished Event -
         </h1>
+
+        {message.text && (
+          <p
+            className={`text-center mb-4 ${
+              message.type === "success" ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {message.text}
+          </p>
+        )}
+
         <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 gap-4">
           <div className="w-full">
             <label className="block text-gray-300 mb-2">Event Name:</label>

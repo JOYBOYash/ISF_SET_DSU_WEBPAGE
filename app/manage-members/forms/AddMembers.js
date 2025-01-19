@@ -10,10 +10,14 @@ function AddMembers() {
   const [memberRefNo, setMemberRefNo] = useState("");
   const [memberMemID, setMemberMemID] = useState("");
 
+  const [message, setMessage] = useState({ type: "", text: "" });
+
   const handleAddMember = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "Members"), {
+      await addDoc(collection(db, "Members"),
+      
+      {
         memberName,
         memberDepartment,
         memberRegNo,
@@ -28,11 +32,11 @@ function AddMembers() {
       setMemberRefNo("");
       setMemberMemID("");
 
-      alert("Member added successfully!");
-    } catch (error) {
-      console.error("Error adding member: ", error);
-      alert("Error adding member. Please try again.");
-    }
+      setMessage({ type: "success", text: "Member added successfully!" });
+    }  catch (error) {
+      console.error("Error adding Member to Firestore: ", error);
+      setMessage({ type: "error", text: "Failed to add member. Please try again." });
+    } 
   };
 
   return (
@@ -44,6 +48,17 @@ function AddMembers() {
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6">
           - Add a Member -
         </h1>
+
+        {message.text && (
+          <p
+            className={`text-center mb-4 ${
+              message.type === "success" ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {message.text}
+          </p>
+        )}
+
         <div className="mb-4 sm:mb-6">
           <label className="block text-gray-300 mb-2">Name:</label>
           <input

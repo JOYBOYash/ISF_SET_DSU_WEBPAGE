@@ -11,6 +11,8 @@ function CouncilAdmin() {
   const [department, setDepartment] = useState("");
   const [contactInfo, setContactInfo] = useState("");
 
+  const [message, setMessage] = useState({ type: "", text: "" });
+
   // Fetch council data from Firestore
   useEffect(() => {
     const councilCollection = collection(db, "Council");
@@ -39,6 +41,7 @@ function CouncilAdmin() {
 
     try {
       const councilRef = doc(db, "Council", titleToSave);
+   
       await setDoc(councilRef, {
         title: titleToSave,
         personName,
@@ -52,12 +55,11 @@ function CouncilAdmin() {
       setPersonName("");
       setDepartment("");
       setContactInfo("");
-
-      alert("Council member saved successfully!");
+      setMessage({ type: "success", text: "Council Member added successfully!" });
     } catch (error) {
-      console.error("Error saving council member:", error);
-      alert("Failed to save council member.");
-    }
+      console.error("Error adding member to Firestore: ", error);
+      setMessage({ type: "error", text: "Failed to add Council Member. Please try again." });
+    } 
   };
 
   return (
@@ -69,6 +71,17 @@ function CouncilAdmin() {
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6">
           - Manage Council -
         </h1>
+
+        {message.text && (
+          <p
+            className={`text-center mb-4 ${
+              message.type === "success" ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {message.text}
+          </p>
+        )}
+
         <div className="mb-4 sm:mb-6">
           <label className="block text-gray-300 mb-2">Select Existing Title:</label>
           <select
