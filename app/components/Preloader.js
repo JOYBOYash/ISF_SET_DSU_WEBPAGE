@@ -42,7 +42,7 @@ export default function PageWrapper({ children }) {
           src="./isfsetlogo.png"
           alt="Admin Logo"
         />
-        <h1 className="text-3xl font-bold p-6">Loading...</h1>
+        <h1 className="text-3xl font-bold animate-pulse p-6">Loading...</h1>
     </div>}>
       <Preloader>{children}</Preloader>
     </Suspense>
