@@ -22,4 +22,4 @@ This is the Official webpage for the ISF-SET.
    
 ### Developer Document 
 
-Google Drive: [https://drive.google.com/file/d/1udTwHyYZro4F91WG7dB4QvQw2Zp3-qyG/view?usp=sharing]
+Google Drive: https://drive.google.com/file/d/1udTwHyYZro4F91WG7dB4QvQw2Zp3-qyG/view?usp=sharing
