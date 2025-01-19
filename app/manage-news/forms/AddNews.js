@@ -69,7 +69,7 @@ function AddNews() {
         name={name}
         value={value}
         onChange={handleChange}
-        placeholder={`Enter ${name} link`}
+        placeholder={`Enter ${name}`}
         className="w-full p-3 rounded-lg bg-blue-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>

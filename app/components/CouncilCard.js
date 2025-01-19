@@ -32,7 +32,7 @@ function CouncilCard(props) {
   };
 
   return (
-    <div className="p-6">
+    <div className="m-12 p-6">
       <h1 className="text-3xl font-bold text-center mb-12 text-blue-600/40">
         Council Members
       </h1>

@@ -41,6 +41,7 @@ const Footer = () => {
                 <label className="text-white">Socials:</label>
                 <a
                   href=" https://linktr.ee/isfdsuset"
+                  target="_blank"
                   className="hover:pointer text-blue-600 hover:text-blue-900"
                 >
                   https://linktr.ee/isfdsuset
@@ -53,7 +54,7 @@ const Footer = () => {
               <h2 className="text-xl text-blue-900/30 font-semibold text-blue-900">Follow Us</h2>
               <div className="flinks flex flex-col text-center  justify-center  p-2 gap-2 space-x-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/ISF-DSU-SET-115105558136000/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex ml-[12px] items-center space-x-2 text-blue-400 hover:text-blue-200 transition"
@@ -62,7 +63,7 @@ const Footer = () => {
                   <span>FaceBook</span>
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/ISF_DSU_SET?s=20&t=-MSyvWBk9WAiA6u88aIKKA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-400 hover:text-blue-200 transition"
@@ -71,7 +72,7 @@ const Footer = () => {
                   <span>Twitter</span>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/isf_dsu_set/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-400 hover:text-blue-200 transition"
@@ -81,7 +82,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://www.youtube.com/@ieteisfdsuset?sub_confirmation=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-400 hover:text-blue-200 transition"
@@ -91,7 +92,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://www.linkedin.com/in/isf-dsu-set-ab0886261/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-400 hover:text-blue-200 transition"
