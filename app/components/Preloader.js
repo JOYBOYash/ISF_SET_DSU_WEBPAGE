@@ -35,7 +35,7 @@ function Preloader({ children }) {
 // Page component where Suspense is applied
 export default function PageWrapper({ children }) {
   return (
-    <Suspense fallback={<div className="w-100vw h-100vh text-center items-center justify-center m-12 flex flex-col gap-12 ">
+    <Suspense fallback={<div className="w-full h-full text-center items-center justify-center m-12 flex flex-col gap-12 ">
 
 <img
           className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] p-2"
