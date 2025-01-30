@@ -65,7 +65,7 @@ function AddTimeline() {
       <h1 className="text-3xl text-center text-white">Manage Timeline</h1>
 
       <form
-        className="bg-blue-800/30 w-full max-w-md border-2 border-white p-8 rounded-lg shadow-lg"
+        className="bg-blue-800/30 w-full max-w-md border-2 p-8 rounded-lg shadow-lg"
         onSubmit={addTimelineEvent}
       >
         <h1 className="text-3xl text-center text-white mb-6">

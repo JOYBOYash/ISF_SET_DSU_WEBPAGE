@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/app/config/firebase";
 import { Briefcase, Trash2, LinkedinIcon } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimations";
 
 function CouncilCard(props) {
   const [councilMembers, setCouncilMembers] = useState([]);
@@ -32,7 +33,8 @@ function CouncilCard(props) {
   };
 
   return (
-    <div className="m-12 p-6">
+   <ScrollAnimation inAnimation = "fadeIn" outAnimation='slideOutDown'>
+        <div className="m-12 p-6">
       <h1 className="text-3xl font-bold text-center mb-12 text-blue-600/40">
         Council Members
       </h1>
@@ -83,6 +85,7 @@ function CouncilCard(props) {
         ))}
       </div>
     </div>
+   </ScrollAnimation>
   );
 }
 

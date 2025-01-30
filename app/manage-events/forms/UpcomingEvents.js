@@ -41,7 +41,7 @@ function UpcomingEvents() {
   return (
     <div className="flex justify-center items-center p-4">
       <form
-        className="bg-blue-800/30 border-2 border-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-full sm:max-w-[550px]"
+        className="bg-blue-800/30 border-2 p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-full sm:max-w-[550px]"
         onSubmit={AddUpcomingEvents}
       >
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6 font-bold">

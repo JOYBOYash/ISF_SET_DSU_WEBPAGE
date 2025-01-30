@@ -1,7 +1,6 @@
 "use client";
-
 import React, { useRef, useState } from "react";
-
+import ScrollAnimation from "./ScrollAnimations";
 function EventApplicationForm() {
   const formRef = useRef(null); // To reference the form
   const [resultMessage, setResultMessage] = useState(""); // To store result message
@@ -50,7 +49,8 @@ function EventApplicationForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 text-gray-100">
+   <ScrollAnimation inAnimation="fadeIn" outAnimation="slideOutDown">
+     <div className="flex items-center justify-center min-h-screen px-4 text-gray-100">
       <div className="container max-w-xl  p-5 bg-blue-900/30 rounded-md shadow-lg">
         <div className="text-center mb-4">
           <p className={`text-base ${resultClass}`}>{resultMessage}</p>
@@ -177,6 +177,7 @@ function EventApplicationForm() {
         </form>
       </div>
     </div>
+   </ScrollAnimation>
   );
 }
 

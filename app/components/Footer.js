@@ -8,8 +8,10 @@ import {
   Youtube,
   Linkedin,
   PenSquare,
+  Scroll,
 } from "lucide-react";
 import FeedbackForm from "./FeedbackForm";
+import ScrollAnimation from "./ScrollAnimations";
 
 const Footer = () => {
   return (
@@ -24,6 +26,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="parts flex gap-10 m-10">
             {/* Location Section */}
+            <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
             <div className=" w-[300px] space-y-2">
               <h2 className="text-xl text-blue-900 font-semibold ">Location</h2>
               <p>NH-45, Trichy-Chennai Trunk Road,</p>
@@ -31,12 +34,17 @@ const Footer = () => {
               <p>Tiruchirapalli Dt., TamilNadu,</p>
               <p>India - 621112.</p>
             </div>
-
+            </ScrollAnimation>
             {/* Contact Section */}
             <div className="space-y-2">
               <h2 className="text-xl text-blue-900 font-semibold ">Reach out</h2>
-              <p>Phone: (+91) 6303422588</p>
+              <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
+              <p >Phone: (+91) 6303422588</p>
+              </ScrollAnimation>
+              <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.4}>
               <p>Email: isfdsuset@gmail.com</p>
+              </ScrollAnimation>
+              <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
               <div className="flex items-center space-x-2">
                 <label className="text-white">Socials:</label>
                 <a
@@ -47,12 +55,15 @@ const Footer = () => {
                   https://linktr.ee/isfdsuset
                 </a>
               </div>
+              </ScrollAnimation>
             </div>
-
+ 
             {/* Social Links Section */}
-            <div className="flex flex-col  space-y-4">
+           <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown">
+           <div className="flex flex-col  space-y-4">
               <h2 className="text-xl text-blue-900/30 font-semibold text-blue-900">Follow Us</h2>
               <div className="flinks flex flex-col text-center  justify-center  p-2 gap-2 space-x-4">
+              <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
                 <a
                   href="https://www.facebook.com/ISF-DSU-SET-115105558136000/"
                   target="_blank"
@@ -62,6 +73,8 @@ const Footer = () => {
                   <Facebook className="w-6 h-6" />
                   <span>FaceBook</span>
                 </a>
+                </ScrollAnimation>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.4}>
                 <a
                   href="https://twitter.com/ISF_DSU_SET?s=20&t=-MSyvWBk9WAiA6u88aIKKA"
                   target="_blank"
@@ -71,6 +84,8 @@ const Footer = () => {
                   <Twitter className="w-6 h-6" />
                   <span>Twitter</span>
                 </a>
+                </ScrollAnimation>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
                 <a
                   href="https://www.instagram.com/isf_dsu_set/"
                   target="_blank"
@@ -80,7 +95,8 @@ const Footer = () => {
                   <Instagram className="w-6 h-6" />
                   <span>Instagram</span>
                 </a>
-
+                </ScrollAnimation>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.8}>
                 <a
                   href="https://www.youtube.com/@ieteisfdsuset?sub_confirmation=1"
                   target="_blank"
@@ -90,7 +106,8 @@ const Footer = () => {
                   <Youtube className="w-6 h-6" />
                   <span>Youtube</span>
                 </a>
-
+                </ScrollAnimation>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={1}>
                 <a
                   href="https://www.linkedin.com/in/isf-dsu-set-ab0886261/"
                   target="_blank"
@@ -100,11 +117,14 @@ const Footer = () => {
                   <Linkedin className="w-6 h-6" />
                   <span>Linkedin</span>
                 </a>
+                </ScrollAnimation>
               </div>
             </div>
+           </ScrollAnimation>
           </div>
           {/* Back to Top Link */}
-          <div className="flex flex-col items-center justify-between gap-4 text-center mt-6">
+        <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown">
+        <div className="flex flex-col items-center justify-between gap-4 text-center mt-6">
             <a
               href="#hero"
               className="flex items-center w-[150px] justify-center gap-2 text-blue-300 hover:text-blue-100 transition"
@@ -121,6 +141,7 @@ const Footer = () => {
               <span>Get Admin Access </span>
             </a>
           </div>
+        </ScrollAnimation>
         </div>
       </div>
     </footer>

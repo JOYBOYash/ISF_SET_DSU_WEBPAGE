@@ -5,6 +5,7 @@ import { db } from "@/app/config/firebase";
 import { CalendarCheck2 } from "lucide-react";
 import { CalendarOff } from "lucide-react";
 import Button from "./Button";
+import ScrollAnimation from "./ScrollAnimations";
 
 function FEvents(props) {
   const [events, setEvents] = useState([]);
@@ -34,7 +35,8 @@ function FEvents(props) {
   };
 
   return (
-    <div className="p-6">
+   <ScrollAnimation  inAnimation="fadeIn" outAnimation="fadeOut">
+     <div className="p-6">
       <h1 className="eventtitle text-3xl absolute font-bold text-center mb-8 text-blue-600/30">
         Finished Events
       </h1>
@@ -116,6 +118,7 @@ function FEvents(props) {
         })}
       </div>
     </div>
+   </ScrollAnimation>
   );
 }
 

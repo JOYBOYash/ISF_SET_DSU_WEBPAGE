@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/app/config/firebase";
 import { Link2Off } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimations";
 
 function TimelineCards({ adminView }) {
   const [timelineData, setTimelineData] = useState([]);
@@ -32,7 +33,8 @@ function TimelineCards({ adminView }) {
   };
 
   return (
-    <div className="relative flex flex-col items-center p-4 m-6 py-10">
+   <ScrollAnimation inAnimation="fadeIn" outAnimation="scaleOut">
+     <div className="relative flex flex-col items-center p-4 m-6 py-10">
       {timelineData.map((item, index) => (
         <div
           key={item.id}
@@ -66,6 +68,7 @@ function TimelineCards({ adminView }) {
         </div>
       ))}
     </div>
+   </ScrollAnimation>
   );
 }
 

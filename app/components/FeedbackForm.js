@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
+import ScrollAnimation from "./ScrollAnimations"
 
 function FeedbackForm() {
   const formRef = useRef(null); // To reference the form
@@ -49,7 +50,8 @@ function FeedbackForm() {
   };
 
   return (
-    <div className="feed flex items-center h-[300px] text-gray-100">
+    <ScrollAnimation  inAnimation="fadeIn" outAnimation="fadeOut">
+      <div className="feed flex items-center h-[300px] text-gray-100">
       <div className="container mx-auto">
         <div className="max-w-xl mx-auto my-10 p-5 rounded-md shadow-lg ">
           <div className="text-center">
@@ -147,6 +149,7 @@ function FeedbackForm() {
         </div>
       </div>
     </div>
+    </ScrollAnimation>
   );
 }
 

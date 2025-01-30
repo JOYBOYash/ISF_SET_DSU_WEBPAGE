@@ -4,6 +4,7 @@ import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/app/config/firebase";
 import { Newspaper, Trash2 } from "lucide-react";
 import { Twitter, Facebook, Linkedin, Youtube, Instagram } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimations";
 
 function NewsCard(props) {
   const [news, setNews] = useState([]);
@@ -33,7 +34,8 @@ function NewsCard(props) {
   };
 
   return (
-    <div className=" p-6">
+   <ScrollAnimation inAnimation="fadeIn" outAnimation="fadeOut">
+     <div className=" p-6">
       <h1 className="text-3xl font-bold text-center mb-8 text-red-600/40">
         Latest News !
       </h1>
@@ -129,6 +131,7 @@ function NewsCard(props) {
         ))}
       </div>
     </div>
+   </ScrollAnimation>
   );
 }
 

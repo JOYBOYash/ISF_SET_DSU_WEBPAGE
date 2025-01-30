@@ -80,7 +80,7 @@ function AddNews() {
       <h1 className="text-2xl sm:text-3xl text-center text-white">Manage News</h1>
 
       <form
-        className="formn bg-blue-800/30 w-[550px] border-2 border-white p-4 sm:p-8 rounded-lg shadow-lg"
+        className="formn bg-blue-800/30 w-[550px] border-2 p-4 sm:p-8 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6">- Add News -</h1>

@@ -42,7 +42,7 @@ function AddMembers() {
   return (
     <div>
       <form
-        className="overflow-hidden bg-blue-800/30 w-full sm:w-[550px] max-w-full h-auto border-2 border-white p-4 sm:p-8 rounded-lg shadow-lg"
+        className="overflow-hidden bg-blue-800/30 w-full sm:w-[550px] max-w-full h-auto border-2 p-4 sm:p-8 rounded-lg shadow-lg"
         onSubmit={handleAddMember}
       >
         <h1 className="text-2xl sm:text-3xl text-center text-white mb-6">

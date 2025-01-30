@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
 import effects from "@/app/styles/Effects.module.css";
+import ScrollAnimation from "./ScrollAnimations";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,7 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+   <ScrollAnimation inAnimation="fadeIn">
+     <nav
       className={`${effects.borderEffect} fixed top-0 border-b-2 left-0 w-full z-50 bg-blue-900/10 text-white shadow-lg`}
     >
      <div className=" w-full items-center justify-center flex backdrop-blur ">
@@ -182,6 +184,7 @@ const Navbar = () => {
         ></div>
       )}
     </nav>
+   </ScrollAnimation>
   );
 };
 

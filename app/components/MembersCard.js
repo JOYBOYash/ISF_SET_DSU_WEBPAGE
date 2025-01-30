@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { db } from "@/app/config/firebase";
 import { User, UserMinus } from "lucide-react";
+import ScrollAnimation from "./ScrollAnimations"
 
 function MembersCard({ adminView = false, adminViewdel = false }) {
   const [members, setMembers] = useState([]);
@@ -58,7 +59,8 @@ function MembersCard({ adminView = false, adminViewdel = false }) {
   }
 
   return (
-    <div className="p-6">
+    <ScrollAnimation  inAnimation="slideInUp" outAnimation="fadeOut">
+      <div className="p-6">
       <h1 className="text-3xl font-bold text-center mb-8 text-blue-600/40">
         Forum Members
       </h1>
@@ -105,6 +107,7 @@ function MembersCard({ adminView = false, adminViewdel = false }) {
         ))}
       </div>
     </div>
+    </ScrollAnimation>
   );
 }
 

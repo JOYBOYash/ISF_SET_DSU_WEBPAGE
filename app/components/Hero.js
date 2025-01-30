@@ -2,6 +2,7 @@ import React from "react";
 import effects from "@/app/styles/Effects.module.css";
 import Button from "./Button";
 
+
 function Hero(props) {
   return (
     <section
