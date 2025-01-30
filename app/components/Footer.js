@@ -23,11 +23,11 @@ const Footer = () => {
         <div className="space-y-4 m-12">
           <FeedbackForm />
         </div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="parts flex gap-10 m-10">
+        <div className="flex flex-col  items-center justify-center gap-4">
+          <div className="parts flex overflow-y-hidden gap-10 m-10">
             {/* Location Section */}
             <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
-            <div className=" w-[300px] space-y-2">
+            <div className=" overflow-y-hidden w-[300px] space-y-2">
               <h2 className="text-xl text-blue-900 font-semibold ">Location</h2>
               <p>NH-45, Trichy-Chennai Trunk Road,</p>
               <p>Near Samayapuram Toll Plaza,</p>
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             </ScrollAnimation>
             {/* Contact Section */}
-            <div className="space-y-2">
+            <div className="overflow-y-hidden space-y-2">
               <h2 className="text-xl text-blue-900 font-semibold ">Reach out</h2>
               <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
               <p >Phone: (+91) 6303422588</p>
@@ -60,9 +60,9 @@ const Footer = () => {
  
             {/* Social Links Section */}
            <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown">
-           <div className="flex flex-col  space-y-4">
+           <div className="overflow-y-hidden flex flex-col  space-y-4">
               <h2 className="text-xl text-blue-900/30 font-semibold text-blue-900">Follow Us</h2>
-              <div className="flinks flex flex-col text-center  justify-center  p-2 gap-2 space-x-4">
+              <div className="flinks overflow-y-hidden flex flex-col text-center  justify-center  p-2 gap-2 space-x-4">
               <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
                 <a
                   href="https://www.facebook.com/ISF-DSU-SET-115105558136000/"
@@ -85,7 +85,7 @@ const Footer = () => {
                   <span>Twitter</span>
                 </a>
                 </ScrollAnimation>
-                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.4}>
                 <a
                   href="https://www.instagram.com/isf_dsu_set/"
                   target="_blank"
@@ -96,7 +96,7 @@ const Footer = () => {
                   <span>Instagram</span>
                 </a>
                 </ScrollAnimation>
-                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.8}>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
                 <a
                   href="https://www.youtube.com/@ieteisfdsuset?sub_confirmation=1"
                   target="_blank"
@@ -107,7 +107,7 @@ const Footer = () => {
                   <span>Youtube</span>
                 </a>
                 </ScrollAnimation>
-                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={1}>
+                <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
                 <a
                   href="https://www.linkedin.com/in/isf-dsu-set-ab0886261/"
                   target="_blank"

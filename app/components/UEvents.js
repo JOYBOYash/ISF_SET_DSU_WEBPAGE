@@ -45,7 +45,7 @@ function UEvents(props) {
         className={
           props.adminView
             ? "cardevent flex m-12 flex-wrap justify-center gap-6"
-            : "cardevent flex m-12 h overflow-x-scroll gap-6"
+            : "cardevent flex m-12 h overflow-x-scroll overflow-y-hidden gap-6"
         }
       >
         {events.map((event) => {
