@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 :root {
-  --background: radial-gradient(
-    circle 2510px at 5.2% 7.2%,
-    rgb(101, 122, 175) 0%,
-    rgb(115, 139, 201) 7.5%,
-    rgb(207, 207, 228) 44.7%
-  );
-
-  font-family: "Kanit", serif;
-  --foreground: #171717;
+--background: radial-gradient(
+      circle 2510px at 5.2% 10.2%,
+      rgb(3, 24, 77) 0%,
+      rgb(4, 28, 87) 7.5%,
+      rgba(4, 4, 29, 1) 44.7%
+    );
+  
+    font-family: "Kanit", serif;
+    --foreground: #ededed;
   scroll-behavior: smooth;
   cursor: default;
   ::-webkit-scrollbar {
