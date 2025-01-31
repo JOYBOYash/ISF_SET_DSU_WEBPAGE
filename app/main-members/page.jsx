@@ -33,7 +33,7 @@ function page() {
         <div className="flex flex-col gap-2 text-left p-2 sm:p-4">
         <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.2}>
           <h1 className="text-2xl sm:text-3xl font-bold text-white">
-            Dr. B Shanmugam Sir
+            Dr. B Shanmugam
           </h1>
           </ScrollAnimation>
           <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.4}>
@@ -43,13 +43,9 @@ function page() {
           </ScrollAnimation>
           <ScrollAnimation inAnimation="slideInUp" outAnimation="slideOutDown" delay={0.6}>
           <p className="text-sm sm:text-xl text-white/50 w-full sm:w-[800px] mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+           The IETE Students Forum (ISF) is a vibrant and integral part of the IETE ecosystem, designed to nurture the technical and professional skills of students in the fields of electronics, telecommunications, and related disciplines. As the Faculty Advisor, it is both a privilege and a responsibility to guide and support the enthusiastic members of the ISF in their endeavors.
+The ISF provides students with a unique platform to engage in technical activities, workshops, seminars, and competitions, fostering innovation and creativity. It encourages collaboration, knowledge sharing, and hands-on learning, which are essential for holistic development. My role as a Faculty Advisor is to mentor students, help them organize events, and ensure that the activities align with the vision and mission of IETE.
+One of the key aspects of my role is to facilitate the smooth functioning of the ISF website, which serves as a digital hub for information, updates, and resources. I work closely with the student team to ensure the website is user-friendly, up-to-date, and reflective of the ISF's achievements and activities. This collaboration not only enhances the forum's online presence but also provides students with valuable experience in web management and digital communication.
           </p>
           </ScrollAnimation>
         </div>
